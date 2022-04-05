@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using AutoMapper;
 using WebApi.Common;
 using WebApi.DBOperations;
 
@@ -8,11 +9,13 @@ namespace WebApi.BookOperations.GetBookById
     public class GetBookByIdQuery
     {
         private readonly BookStoreDbContext _dbContext;
+        private readonly IMapper _mapper;
         public int BookId { get; set; }
 
-        public GetBookByIdQuery(BookStoreDbContext dbContext)
+        public GetBookByIdQuery(BookStoreDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
+            _mapper = mapper;
         }
 
         public GetBookByIdModel Handle()
@@ -21,11 +24,8 @@ namespace WebApi.BookOperations.GetBookById
             if(book is null)
             throw new InvalidOperationException("The book couldn't find.");
             
-            GetBookByIdModel model = new GetBookByIdModel();
-            model.Title = book.Title;
-            model.Genre = ((GenreEnum)book.GenreId).ToString();
-            model.PageCount = book.PageCount;
-            model.PublishDate = book.PublishDate.Date.ToString("dd/mm/yyyy");
+            GetBookByIdModel model = _mapper.Map<GetBookByIdModel>(book);
+            
             return model;
         }
 
