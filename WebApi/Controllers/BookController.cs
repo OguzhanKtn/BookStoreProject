@@ -12,6 +12,7 @@ using WebApi.BookOperations.GetBookById;
 using static WebApi.BookOperations.GetBookById.GetBookByIdQuery;
 using WebApi.BookOperations.DeleteBook;
 using AutoMapper;
+using FluentValidation;
 
 namespace WebApi.Controllers
 {
@@ -39,9 +40,11 @@ namespace WebApi.Controllers
         {
             GetBookByIdQuery getBook = new GetBookByIdQuery(_context,_mapper);
             GetBookByIdModel result;
+            GetBookByIdValidator validator = new GetBookByIdValidator();
             try
             {
                 getBook.BookId = id;
+                validator.ValidateAndThrow(getBook);
                 result = getBook.Handle();
             }
             catch (Exception ex)
@@ -55,9 +58,11 @@ namespace WebApi.Controllers
         public IActionResult AddBook([FromBody] CreateBookModel newBook)
         {
             CreateBookCommand command = new CreateBookCommand(_context,_mapper);
+            CreateBookCommandValidator validator = new CreateBookCommandValidator();
             try
             {
                 command.Model = newBook;
+                validator.ValidateAndThrow(command);
                 command.Handle();
             }
             catch (Exception ex)
@@ -71,10 +76,12 @@ namespace WebApi.Controllers
         public IActionResult UpdateBook(int id, [FromBody] UpdateBookModel updatedBook)
         {
             UpdateBookCommand command = new UpdateBookCommand(_context);
+            UpdateBookValidator validator = new UpdateBookValidator();
             try
             {
                 command.BookId = id;
                 command.Model = updatedBook;
+                validator.ValidateAndThrow(command);
                 command.Handle();
             }
             catch (Exception ex)
@@ -88,9 +95,11 @@ namespace WebApi.Controllers
         public IActionResult DeleteBook(int id)
         {
             DeleteBookCommand command = new DeleteBookCommand(_context);
+            DeleteBookValidator validator = new DeleteBookValidator();
             try
             {
                 command.BookId = id;
+                validator.ValidateAndThrow(command);
                 command.Handle();
             }
             catch (Exception ex)

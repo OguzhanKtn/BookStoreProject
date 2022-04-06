@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+ZCg0clqI25uR4Cy1NB3OXgnV14me0MFYgnj6dpAnu+uV4TzhcfHfN38sX+YKBbGWwH2H4vVA9sk82Ftn4MJ6w==",
+  "dgSpecHash": "7iKY4s82qzdQK/IqoUwtSquFPJ4uKgSYUzSClSnr4+Ni5TPXh4gICSdVjkE0vYC8D1kHu2LS1GXbPOkBp0caeQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\TOSHIBA\\Desktop\\.NetTrainings\\Practices\\BookStore\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "C:\\Users\\TOSHIBA\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.6\\microsoft.entityframeworkcore.5.0.6.nupkg.sha512",
     "C:\\Users\\TOSHIBA\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.6\\microsoft.entityframeworkcore.abstractions.5.0.6.nupkg.sha512",

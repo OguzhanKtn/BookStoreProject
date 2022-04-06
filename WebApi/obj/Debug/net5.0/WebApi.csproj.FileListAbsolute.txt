@@ -34,3 +34,4 @@ C:\Users\TOSHIBA\Desktop\.NetTrainings\Practices\BookStore\webapi\bin\Debug\net5
 C:\Users\TOSHIBA\Desktop\.NetTrainings\Practices\BookStore\webapi\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\TOSHIBA\Desktop\.NetTrainings\Practices\BookStore\WebApi\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\TOSHIBA\Desktop\.NetTrainings\Practices\BookStore\WebApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\TOSHIBA\Desktop\.NetTrainings\Practices\BookStore\WebApi\bin\Debug\net5.0\FluentValidation.dll
